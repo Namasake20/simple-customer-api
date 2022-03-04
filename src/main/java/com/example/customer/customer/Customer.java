@@ -3,6 +3,7 @@ package com.example.customer.customer;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 import java.util.UUID;
 
 public class Customer {
@@ -11,6 +12,7 @@ public class Customer {
     private String name;
     @NotBlank
     private String email;
+    @NotNull
     private Integer age;
 
     public Customer(@JsonProperty("id") UUID id,@JsonProperty("name") String name,@JsonProperty("email") String email,@JsonProperty("age") Integer age) {
